@@ -10,16 +10,6 @@ let text = ref("อยากกินไก่ย่าง"),
     y = ref(0)
 
 onMounted(() => {
-  if([
-    'iPad Simulator',
-    'iPhone Simulator',
-    'iPod Simulator',
-    'iPad',
-    'iPhone',
-    'iPod'
-  ].includes(navigator.platform)) {
-    document.getElementById("textbox").style.fontFamily = "Prompt"
-  }
   document.getElementById('bgImg').onload = () => {
     if (window.innerWidth < 768) {
       fontSize.value = 18
