@@ -10,10 +10,17 @@ let text = ref("อยากกินไก่ย่าง"),
     y = ref(0)
 
 onMounted(() => {
-  if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+  if([
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform)) {
     document.getElementById("textbox").style.fontFamily = "-apple-system"
   }
-  document.getElementById('bgImg').onload = () => 
+  document.getElementById('bgImg').onload = () => {
     if (window.innerWidth < 768) {
       fontSize.value = 18
     }
