@@ -18,7 +18,7 @@ onMounted(() => {
     'iPhone',
     'iPod'
   ].includes(navigator.platform)) {
-    document.getElementById("textbox").style.fontFamily = "-apple-system"
+    document.getElementById("textbox").style.fontFamily = "Prompt"
   }
   document.getElementById('bgImg').onload = () => {
     if (window.innerWidth < 768) {
