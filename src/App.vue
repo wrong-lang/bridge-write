@@ -10,7 +10,7 @@ let text = ref("อยากกินไก่ย่าง"),
     y = ref(0)
 
 onMounted(() => {
-  if(!(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) {
+  if((/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) {
     document.getElementById("textbox").style.fontFamily = "-apple-system"
   }
   document.getElementById('bgImg').onload = () => 
