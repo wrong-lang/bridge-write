@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,5 +30,5 @@ html {
     white-space: nowrap;
     color: #ffffff;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff;
-    font-family: 'K2D', sans-serif;
+    font-family: 'Sarabun', sans-serif;
 }
