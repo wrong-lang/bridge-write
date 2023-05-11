@@ -1,23 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Prompt"), local("Prompt"),
-    url("/Prompt-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "K2D";
-  font-style: normal;
-  font-weight: 400;
-  src: local("K2D"), local("K2D"),
-    url("/K2D-Regular.ttf") format("truetype");
-}
-
 
 html {
     @apply md:px-12 py-6 px-4 bg-gradient-to-bl from-yellow-200 via-green-200 to-blue-200;
@@ -31,4 +14,19 @@ html {
     color: #ffffff;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff;
     font-family: 'Ayuthaya', 'Thonburi', 'K2D', sans-serif;
+}
+
+@font-face {
+    font-family: "Prompt";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Prompt"), local("Prompt"),
+    url("/Prompt-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "K2D";
+    font-style: normal;
+    font-weight: 400;
+    src: local("K2D"), local("K2D"),
+    url("/K2D-Regular.ttf") format("truetype");
 }
