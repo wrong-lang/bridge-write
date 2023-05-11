@@ -11,6 +11,9 @@ let text = ref("อยากกินไก่ย่าง"),
 
 onMounted(() => {
   document.getElementById('bgImg').onload = () => {
+    if (window.innerWidth < 768) {
+      fontSize.value = 10;
+    }
     x.value = (document.getElementById('bgImg').offsetWidth / 2 - document.getElementById('textbox').offsetWidth / 2 - 10)
     y.value = (document.getElementById('bgImg').offsetHeight / 2 - document.getElementById('textbox').offsetHeight / 2 + 100)
 
