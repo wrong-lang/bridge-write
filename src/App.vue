@@ -4,22 +4,18 @@ import elementDraggable from "./lib/elementDraggable.ts";
 import {downloadImage} from "./lib/eventHandler.ts";
 
 let text = ref("อยากกินไก่ย่าง"),
-    fontSize = ref(24),
+    fontSize = ref(12),
     color = ref("#ffffff"),
     x = ref(0),
     y = ref(0)
 
 onMounted(() => {
   document.getElementById('bgImg').onload = () => {
-    if (window.innerWidth < 768) {
-      fontSize.value = 18
-    }
-    x.value = (document.getElementById('bgImg').offsetWidth / 2 - document.getElementById('textbox').offsetWidth / 2) - 17
-    y.value = (document.getElementById('bgImg').offsetHeight / 2 - document.getElementById('textbox').offsetHeight / 2) + 12
+    x.value = (document.getElementById('bgImg').offsetWidth / 2 - document.getElementById('textbox').offsetWidth / 2 - 10)
+    y.value = (document.getElementById('bgImg').offsetHeight / 2 - document.getElementById('textbox').offsetHeight / 2 + 100)
 
     document.getElementById("bridge-text").style.fontSize = fontSize.value + "px"
-    document.getElementById('textbox').style.left = x.value + "px";
-    document.getElementById('textbox').style.top = y.value + "px";
+    document.getElementById('textbox').style.transform = "translate(" + x.value + "px, " + y.value + "px)"
     elementDraggable(document.getElementById('textbox'))
 
     document.getElementById('textbox').onmousemove = function () {
